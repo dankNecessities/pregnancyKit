@@ -11,8 +11,10 @@ export default class PreparationMenu extends Component {
 	render(){
 		const steps = this.props.data.map((d) => {
 			return (
-				<StepComponent source={d.source}
-						text={d.text}/>
+				<StepComponent 
+					source={d.source}
+					text={d.text}
+					modalText={d.modalText}/>
 			)
 		})
 		return(
@@ -28,6 +30,10 @@ const styles = StyleSheet.create({
 		flex: 1,
 		flexDirection: 'column',
 		justifyContent: 'center',
-		alignItems: 'center'
+		alignItems: 'center',
+		padding: 5,
+		width: Dimensions.get('window').width,
+		marginTop: 10,
+		backgroundColor: '#cccccc',
 	}
 });

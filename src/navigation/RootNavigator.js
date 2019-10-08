@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createSwitchNavigator } from 'react-navigation';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import HomeScreen from '../screens/HomeScreen';
-import PreparationNavigator from './PreparationNavigator';
+import MainNavigator from './MainNavigator';
 
-export default RootNavigator = createStackNavigator(
+export default RootNavigator = createSwitchNavigator(
 	{
 		"Welcome" : WelcomeScreen,
-		"Home" : PreparationNavigator
+		"Home" : MainNavigator
 	},
 	{
 		initialRouteName: "Welcome",

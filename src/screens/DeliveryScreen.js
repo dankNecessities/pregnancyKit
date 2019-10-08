@@ -7,23 +7,18 @@ import PreparationMenu from '../components/PreparationMenu';
 import PreparationHeader from '../components/PreparationHeader';
 import InfoTemplate from './InfoTemplate';
 
-const preparationData = [
-	{ 
-		key: 1, 
-		source: require('../assets/handwash.png'), 
-		text: "If you have time, wash your hands", 
-		modalText: "Use clean water and soap to disinfect your hands" }, 
-	{ key: 2, source: require('../assets/pillow.png'), text: "Get a comfortable place to lie on, most preferably the floor" },
-	{ key: 3, source: require('../assets/pillow.png'), text: "Spread a cloth on the floor, ensuring comfort" },
+const deliveryData = [
+	{ key: 1, source: require('../assets/handwash.png'), text: "Get ready to cup the baby's head on their way out" }, 
+	{ key: 2, source: require('../assets/pillow.png'), text: "Use a clean towel to clean the fluids away from the baby's airway by stroking downwards on the nose and mouth" },
 ]
 
-export default class HomeScreen extends Component {
+export default class DeliveryScreen extends Component {
 	render() {
 		return(
 			<InfoTemplate 
 				icon={require('../assets/prepare.png')}
-				title={"Preparation"}
-				data={preparationData}
+				title={"Delivery"}
+				data={deliveryData}
 				style={styles.home}
 			/>
 		);
